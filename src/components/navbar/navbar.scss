@@ -1,0 +1,72 @@
+header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    height: 70px;
+    padding: 0 20px;
+    border-bottom: 1px solid silver;
+    nav {
+        .logo {
+            flex: 1;
+            a {
+                font-size: 16px;
+                display: flex;
+                align-items: center;
+                font-weight: 500;
+                color: darkblue;
+                text-decoration: none;
+            }
+        }
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex: 2;
+        .nav-link{
+            color: #111;
+            font-size: 14px;
+        }
+    }
+    .search-box {
+        flex: 6;
+        form {
+            width: 50%;
+            border: 1px solid silver;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            input{
+                background: none;
+                border: 0;
+                outline: none;
+                flex: 1 1 auto;
+            }
+        }
+    }
+    .user-nav {
+        flex: 3;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        .nav-link {
+            color: #111;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .user-profile-link {
+            a{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+.rightSideBar {
+    flex: 3;
+    padding: 10px;
+    .card {
+        background-color: white;
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        h3{
+            margin: 15px 0;
+        }
+        ul {
+            list-style: none;
+            li{
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                margin-bottom: 10px;
+                img{
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                .card-action{
+                    flex: 1;
+                    display: flex;
+                    justify-content: flex-end;
+                    gap: 5px;
+                }
+                button{
+                    justify-self: flex-end;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+.loginContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 100vh;
+    padding: 10%;
+    background-color: #eee;
+    width: 100vw;
+
+    .heroText {
+        flex: 7;
+    }
+    .loginForm {
+        padding: 15px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        width: 300px;
+        flex: 3;
+        border-radius: 5px;
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            input{
+                padding: 10px;
+                background-color: none;
+                border-radius: 5px;
+                border: 1px solid silver;
+            }
+
+            button {
+                background-color: rgb(26, 109, 227, .9);
+                cursor: pointer;
+                display: block;
+                margin: 0;
+                &:hover {
+                    background-color: #1a6de3;
+                }
+            }
+            a {
+                align-self: center;
+                text-decoration: none;
+            }
+        }
+        hr {
+            margin: 15px 0;
+        }
+        button {
+            background-color: rgb(56, 155, 36,0.9);
+            padding: 10px;
+            color: #fff;
+            border: 0;
+            outline: 0;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+            cursor: pointer;
+            &:hover {
+                background-color: rgb(56, 155, 36);
+            }
+        }
+    }
+}
