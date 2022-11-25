@@ -1,8 +1,9 @@
-.loginContainer {
+.registerContainer {
     display: flex;
     height: 60vh;
     box-shadow: 0 0 10px silver;
     position: absolute;
+    flex-direction: row-reverse;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -30,7 +31,7 @@
             font-size: 18px;
         }
     }
-    .loginForm {
+    .registerForm {
         padding: 15px;
         background-color: #fff;
         flex: 1;

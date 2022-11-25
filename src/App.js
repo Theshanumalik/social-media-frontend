@@ -4,12 +4,12 @@ import Login from "./pages/login/Login";
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
   Outlet,
 } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import LeftSideBar from "./components/leftSidebar/LeftSideBar";
 import RightSideBar from "./components/rightSidebar/RightSideBar";
+import Register from "./pages/register/Register";
 
 const Layout = () => {
   return (
@@ -39,6 +39,10 @@ const App = () => {
     {
       path: "/login",
       element: <Login />,
+    },
+    {
+      path: "/register",
+      element: <Register />,
     },
   ]);
   return <RouterProvider router={router} />;
