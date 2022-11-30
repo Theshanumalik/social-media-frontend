@@ -5,11 +5,15 @@ import {
   createBrowserRouter,
   RouterProvider,
   Outlet,
+  useNavigate,
+  Navigate,
 } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import LeftSideBar from "./components/leftSidebar/LeftSideBar";
 import RightSideBar from "./components/rightSidebar/RightSideBar";
 import Register from "./pages/register/Register";
+import { useContext } from "react";
+import { AuthContext } from "./context/AuthContext";
 
 const Layout = () => {
   return (
@@ -23,12 +27,18 @@ const Layout = () => {
     </>
   );
 };
-
+const ProtectedRout = ({children}) => {
+  const {state} = useContext(AuthContext);
+  if(!state.user) {
+    return <Navigate to='/login' />
+  }
+  return children
+}
 const App = () => {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Layout />,
+      element: <ProtectedRout><Layout /></ProtectedRout>,
       children: [
         {
           path: '/',

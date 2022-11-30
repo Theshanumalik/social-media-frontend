@@ -1,11 +1,11 @@
 import {createContext, useReducer, useEffect} from 'react'
 const INTIAL_STATE = {
-    user:  {},
+    user:  JSON.parse(localStorage.getItem("user")) || null,
     isFetching: false,
     error: null
 }
 
-const reducer = (action, state) => {
+const reducer = (state, action) => {
     switch(action.type) {
         case 'LOGIN_START':
             return {
