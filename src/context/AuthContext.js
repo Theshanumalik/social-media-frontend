@@ -34,7 +34,11 @@ const reducer = (state, action) => {
                 isFetching: false,
                 error: null
             }
-
+        case 'REMOVE_ERROR':
+            return {
+                ...state,
+                error: null
+            }
         default:
             return state
     }
@@ -47,6 +51,17 @@ export const AuthContextProvider = ({children}) => {
     useEffect(() => {
       localStorage.setItem("user", JSON.stringify(state.user))
     }, [state.user])
+
+    useEffect(() => {
+      if(!state.error) return 
+      const timeout = setTimeout(() => {
+        dispatch({type: "REMOVE_ERROR"})
+      }, 5000);
+      return () => {
+        clearTimeout(timeout)
+      }
+    }, [state.error])
+    
     
     return (
         <AuthContext.Provider value={{state, dispatch}}>

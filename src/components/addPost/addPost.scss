@@ -1,0 +1,64 @@
+.AddPost {
+  background-color: white;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 0 10px silver;
+  .captionInput {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    input {
+      background: none;
+      font-size: 16px;
+      border: 0;
+      outline: none;
+      flex: 1 1 auto;
+    }
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  hr {
+    margin: 10px 0;
+  }
+
+  .addPostAction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button,
+    label {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    button {
+      background-color: rgb(26, 109, 227, 0.9);
+      cursor: pointer;
+      border: 0;
+      border-radius: 5px;
+      outline: none;
+      color: white;
+      &:hover {
+        background-color: #1a6de3;
+      }
+      &:disabled {
+        cursor: not-allowed;
+        background-color: gray;
+      }
+    }
+  }
+  .addPostImage {
+    width: 100%;
+    margin-top: 10px;
+    max-height: 60vh;
+    object-fit: contain;
+    background-color: silver;
+  }
+}

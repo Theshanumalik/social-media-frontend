@@ -14,6 +14,7 @@ import RightSideBar from "./components/rightSidebar/RightSideBar";
 import Register from "./pages/register/Register";
 import { useContext } from "react";
 import { AuthContext } from "./context/AuthContext";
+import Profile from "./pages/profile/Profile";
 
 const Layout = () => {
   return (
@@ -43,7 +44,11 @@ const App = () => {
         {
           path: '/',
           element: <Home />
-        }
+        },
+      {
+        path: "/profile/:userId",
+        element: <Profile />
+      }
       ]
     },
     {

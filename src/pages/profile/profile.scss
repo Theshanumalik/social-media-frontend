@@ -1,0 +1,56 @@
+main {
+  img {
+    object-fit: cover;
+    object-position: center;
+  }
+  .profileCover {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+  }
+  .profileHeader {
+    position: relative;
+    height: 200px;
+    padding-top: 60px;
+    background-color: white;
+    border-radius: 10px;
+    .profilePicture {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      top: -50px;
+      right: 0;
+      position: absolute;
+      left: 0;
+      margin: 0 auto;
+      border: 2px solid white;
+    }
+    .userInformation {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 10px;
+      ul {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+        color: silver;
+      }
+      button {
+        display: flex;
+        border-radius: 5px;
+        align-items: center;
+        gap: 3px;
+        padding: 5px 12px;
+        background-color: rgb(26, 109, 227, 0.9);
+        border: 0;
+        outline: none;
+        color: white;
+        cursor: pointer;
+        &:hover {
+          background-color: #1a6de3;
+        }
+      }
+    }
+  }
+}

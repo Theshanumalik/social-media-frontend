@@ -3,7 +3,7 @@ import './login.scss'
 import axios from 'axios';
 import { useContext } from 'react';
 import { AuthContext } from '../../context/AuthContext';
-import {Navigate, useNavigate} from 'react-router-dom'
+import {Link, Navigate, useNavigate} from 'react-router-dom'
 
 const Login = () => {
   const [inputs, setInputs] = useState({});
@@ -29,16 +29,16 @@ const Login = () => {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, vero.</p>
         </div>
         <div className="loginForm">
-          <h1>Welcome back!</h1>
+            <h1>Welcome back!</h1>
             <form onSubmit={handleLogin}>
             {state.error && <span className='errorMessage'>{state?.error}!</span>}
                 <input type="email" placeholder="Email address" onChange={handleChange} name='email' required/>
                 <input type="password" placeholder='Password' onChange={handleChange} name='password' required/>
-                <button disabled={state.isFetching}>Login</button>
+                <button disabled={state.isFetching}>{state.isFetching ? "Please wait...": "Login"}</button>
                 <a href="/">Forget Password</a>
             </form>
             <hr />
-            <button>Create New Account</button>
+            <Link to="/register" className='createNewAccount'>Create New Account</Link>
         </div>
     </div>
   )

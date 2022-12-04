@@ -60,9 +60,10 @@
                 &:hover {
                     background-color: #1a6de3;
                 }
-            }
-            button:disabled {
-                cursor: not-allowed;
+                &:disabled {
+                    cursor: not-allowed;
+                    background-color: gray;
+                }
             }
             a {
                 align-self: center;
@@ -72,7 +73,7 @@
         hr {
             margin: 15px 0;
         }
-        button {
+        .createNewAccount, button {
             background-color: rgb(56, 155, 36,0.9);
             padding: 10px;
             color: #fff;
@@ -85,6 +86,12 @@
             &:hover {
                 background-color: rgb(56, 155, 36);
             }
+            
+        }
+        .createNewAccount {
+            text-decoration: none;
+            width: 200px;
+            text-align: center;
         }
     }
 }
